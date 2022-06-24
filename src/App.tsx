@@ -1,24 +1,40 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Data } from './Data';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <button style={{ padding: "50vw 50vw" }} onClick={async () => {
+        // console.log(await Data());
+        await Timer()
+        setTimeout(() => {
+          console.log("GO!");
+        }, 1000)
+        // await Timer();
+      }}></button>
+      <button style={{ padding: "50vw 50vw" }} onClick={() => {
+        Timer().then(() => {
+          setTimeout(() => {
+            console.log("Go")
+          }, 1000)
+        })
+      }}>
+      </button> */}
+      <script>
+        const data = await Data()
+        console.log(await Data())
+      </script>
+      <button onClick={async () => {
+        console.log(await Data())
+      }}>
+        <button onClick={() => {
+
+        }}></button>
+
+
+      </button>
     </div>
   );
 }
