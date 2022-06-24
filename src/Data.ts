@@ -7,14 +7,6 @@ export const Data = async () => {
   return datab
 }
 
-export const db = axios.get("https://mocaff.net/order") 
 
-// export const Timer = () => {
-//   return new Promise((resolve: any) => {
-//     setTimeout(() => {
-//       console.log("Let's!")
-//       resolve()
-//     }, 1000)
-//   })
-// }
+
 
