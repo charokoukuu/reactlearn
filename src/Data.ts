@@ -1,16 +1,11 @@
 import axios from "axios"
-import { resolve } from "path"
-
-// export const Data = async () => {
-//   let datab = await axios.get("https://mocaff.net/order")
-//   datab = datab.data
-//   // console.log(datab)
-//   return datab
-// }
-
-export const Data = () => {
-  return new Promise(async resolve => {
-    resolve(await axios.get("https://mocaff.net/order"))
+import { DataProps, ReceiveDataProps } from "./App"
+export const Data: () => Promise<any> = async () => {
+  // awaitはPromiseの内部では作動しない．
+  // constでデータを得てから，resolveに対して値を入力し返却
+  const retData: ReceiveDataProps[] = await axios.get("https://mocaff.net/order")
+  return new Promise(resolve => {
+    // 入力データを受け取れた場合動作するコード（return的ニュアンス？）
+    resolve(retData)
   })
 }
-
