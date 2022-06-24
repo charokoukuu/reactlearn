@@ -1,25 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import { useEffect, useState } from "react";
-import './App.css';
-import { resolve } from 'path';
-import { Data } from './Data';
+import { resolve } from "path";
+import { useEffect } from "react";
+import { Data } from "./Data";
+
+
+const MakeData = async () => {
+  const database = await Data();
+  return database
+}
+const db = MakeData();
+console.log(db)
 
 
 const App = () => {
-  let db
-  useEffect(() => {
-    const MakeDataBase = async () => {
-      await new Promise((resolve: any) => {
-        db = Data();
-        resolve();
-      })
-    }
-    MakeDataBase();
-  }, [])
-  console.log(db)
-
   return (
+
     <div>
     </div>
   );
