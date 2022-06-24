@@ -9,8 +9,8 @@ import { resolve } from "path"
 // }
 
 export const Data = () => {
-  return new Promise(resolve => {
-    resolve(axios.get("https://mocaff.net/order"))
+  return new Promise(async resolve => {
+    resolve(await axios.get("https://mocaff.net/order"))
   })
 }
 

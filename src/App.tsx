@@ -4,16 +4,14 @@ import { Data } from "./Data";
 
 
 const MakeData = async () => {
-  const database = await Data();
-  return database
+  const database: any = await Data();
+  return database.data
 }
 const db = MakeData();
 console.log(db)
 
-
 const App = () => {
   return (
-
     <div>
     </div>
   );
