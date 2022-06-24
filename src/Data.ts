@@ -5,15 +5,16 @@ export const Data = async () => {
   let datab = await axios.get("https://mocaff.net/order")
   datab = datab.data
   return datab
-
 }
 
-export const Timer = () => {
-  return new Promise((resolve: any) => {
-    setTimeout(() => {
-      console.log("Let's!")
-      resolve()
-    }, 1000)
-  })
-}
+export const db = axios.get("https://mocaff.net/order") 
+
+// export const Timer = () => {
+//   return new Promise((resolve: any) => {
+//     setTimeout(() => {
+//       console.log("Let's!")
+//       resolve()
+//     }, 1000)
+//   })
+// }
 

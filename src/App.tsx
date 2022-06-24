@@ -1,9 +1,23 @@
 import React from 'react';
 import logo from './logo.svg';
+import { useEffect, useState } from "react";
 import './App.css';
 import { Data } from './Data';
 
+interface DocumentData {
+  [field: string]: any;
+}
+
 const App = () => {
+  // const [data, setData] = useState<DocumentData[]>([]);
+  // const GetData = async () => {
+  //   const d = await Data();
+  //   setData(data => [...data, d]);
+  // }
+  // useEffect(() => {
+  //   GetData()
+  //   console.log(data)
+  // },)
   return (
     <div>
       {/* <button style={{ padding: "50vw 50vw" }} onClick={async () => {
@@ -22,19 +36,9 @@ const App = () => {
         })
       }}>
       </button> */}
-      <script>
-        const data = await Data()
-        console.log(await Data())
-      </script>
       <button onClick={async () => {
         console.log(await Data())
-      }}>
-        <button onClick={() => {
-
-        }}></button>
-
-
-      </button>
+      }}></button>
     </div>
   );
 }
