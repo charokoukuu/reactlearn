@@ -1,24 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header  from './Header';
+import Menu from './Menu'
+import Stack from '@mui/material/Stack';
+import { getArticals } from './components/MenuOrder';
+
+export interface DataProps{
+  id: number;
+  title: string;
+  price: number;
+}
 
 function App() {
+  const [data, setData] = useState<DataProps[]>([]);
+  useEffect(() => {
+    (async () => {
+      setData((await getArticals()))
+    })()
+  }, [])
+  useEffect(() => {
+    console.log(data)
+  }, [data])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Stack direction="column"
+  justifyContent="center"
+  alignItems="center"
+  spacing={8}>
+    <Header/>
+    <Menu/>
+    </Stack>
     </div>
   );
 }
