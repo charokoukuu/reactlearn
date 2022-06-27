@@ -26,7 +26,9 @@ function App() {
     <div>
       <Header />
       <FCard
-        data={data} />
+        data={data} onClick={(e) => {
+          alert("choosed menu\nTitle:" + (e.title) + "\nPrice:" + (e.price) + "\nID:" + (e.id))
+        }} />
     </div>
   );
 }

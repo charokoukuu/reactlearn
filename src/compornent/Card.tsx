@@ -9,13 +9,14 @@ import { DataProps } from '../App';
 
 interface FCardProps {
   data: DataProps[];
+  onClick: (e: DataProps) => void;
 }
 
 
 export default function FCard(props: FCardProps) {
   return (
     <div>
-      {props.data.map((e: any, i: any) => {
+      {props.data.map((e: DataProps, i: number) => {
         return (
           <Card key={i} sx={{ minWidth: 275 }}>
             <CardContent>
@@ -28,7 +29,7 @@ export default function FCard(props: FCardProps) {
             </CardContent>
             <CardActions>
               <Button size="large" onClick={() => {
-                alert("choosed menu\nTitle:" + (props.data[i].title) + "\nPrice:" + (props.data[i].price) + "\nID:" + (props.data[i].id))
+                props.onClick(e);
               }}>+Cart</Button>
             </CardActions>
           </Card>
