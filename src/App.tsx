@@ -12,6 +12,7 @@ export interface DataProps {
 
 function App() {
   const [data, setData] = useState<DataProps[]>([]);
+  const [menu, setMenu] = useState();
   useEffect(() => {
     // 即時関数内でasync awaitを利用
     // 値をsetDataで外部変数へ出力
