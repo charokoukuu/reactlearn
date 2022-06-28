@@ -21,21 +21,22 @@ export const App=()=> {
             setMenu( results.data);
             console.log(menu);
       // 成功したら取得できたデータを返す
-            return menu;
+          return menu;
         })
 
 
   },[])
   
   return (
-       {menu.map((item:any) => {
-        return (
-        <div key={item.id}>
-          <p>{ item.title }</p>
-          <p>{ item.body }</p>
-     
-    </div>
-        )
+    <div>
+      {
+        menu.map((item:any) => {
+          return (
+            <p>{item}</p>
+          )
+        })
       }
-  )
-}
+    </div>
+  );
+
+};
