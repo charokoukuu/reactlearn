@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Header  from './Header';
 import Menu from './Menu'
 import Stack from '@mui/material/Stack';
 import { getArticals } from './components/MenuOrder';
+import { Grid } from '@mui/material';
 
 export interface DataProps{
   id: number;
@@ -19,18 +19,19 @@ function App() {
       setData((await getArticals()))
     })()
   }, [])
-  useEffect(() => {
-    console.log(data)
-  }, [data])
+
+
+
   return (
     <div>
-    <Stack direction="column"
-  justifyContent="center"
+      <Grid
+  container
+  direction="column"
   alignItems="center"
-  spacing={8}>
+>
+🇰   <Menu data={data}/>
     <Header/>
-    <Menu/>
-    </Stack>
+    </Grid>
     </div>
   );
 }
