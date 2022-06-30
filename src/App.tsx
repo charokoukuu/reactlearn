@@ -33,7 +33,11 @@ export const App=()=> {
          menu.map((item:MenuData,index) => {
            return (
             <p>
+            {item.id}
+            {" "}            
             {item.title}
+            {" "}
+            {item.price}
             </p>
            )
          })}
