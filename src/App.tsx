@@ -26,18 +26,21 @@ export const App=()=> {
 
 
   },[])
-  
-  return (
-    <div>
-      {
-        menu.map((item:any,index) => {
-          return (
-           <p>{item}</p>
-            
-          )
-        })
-      }
-    </div>
-  );
 
-};
+  
+   return (
+     <div>{
+         menu.map((item:any,index) => {
+           return (
+            <p>
+            console.log(item);
+            </p>
+           )
+         })}
+      
+     </div>
+   );
+
+ };
+
+
