@@ -30,10 +30,10 @@ export const App=()=> {
   
    return (
      <div>{
-         menu.map((item:any,index) => {
+         menu.map((item:MenuData,index) => {
            return (
             <p>
-            console.log(item);
+            {item.title}
             </p>
            )
          })}
