@@ -35,7 +35,6 @@ export default function MultiActionAreaCard(props: MenuDataProps) {
         props.data.map((e,i)=>{
           
           return(   
-            
             <Card key = {i} style={{margin:50}}>
               <Button variant="outlined" onClick={handleClickOpen}>
                    <CardActionArea style={{width:200,height:200}}>
@@ -65,8 +64,8 @@ export default function MultiActionAreaCard(props: MenuDataProps) {
             閉じる
           </Button>
         </DialogActions>
-      </Dialog>
-               </Card>
+        </Dialog>
+        </Card>
                
           )
         })
