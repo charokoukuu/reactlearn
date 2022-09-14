@@ -4,7 +4,7 @@
 (https://xd.adobe.com/view/9fb4b3ba-6af3-411c-a0d7-1a198f98a79c-cae7/)
 
 - メニューデータはサーバにあります。以下のURLでGET通信を行い、メニューデータを取得したものを描画してください。なお、GET通信にはaxiosライブラリを使用してください。
-(https://mocaff.net/order)
+(https://mocaff.tk/order)
 
 - データ取得に成功すると以下のようなデータが返ってきますので、map関数を使って描画してください。
 
